@@ -4,9 +4,15 @@
 
 #include "../include/image/image_io.h"
 #include "../include/image/image_utils.h"
+#include "../include/utils/utils.h"
 
+void ma_test() {
+    printf("%s", get_substring("Hello, world!\n", 5));
+}
 
 int main( int argc, char** argv ) {
+    ma_test();
+
     if (argc <= 1) {
         printf("Please, pass the input file in first argument and output file in second argument");
         return 1;
