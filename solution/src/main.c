@@ -4,9 +4,10 @@
 
 #include "../include/image/image_io.h"
 #include "../include/image/image_utils.h"
-
+#include "../include/utils/utils.h"
 
 int main( int argc, char** argv ) {
+
     if (argc <= 1) {
         printf("Please, pass the input file in first argument and output file in second argument");
         return 1;

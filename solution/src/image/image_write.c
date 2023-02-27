@@ -1,6 +1,7 @@
 #include "../../include/image/image_write.h"
+#include "../../include/image/image_utils.h"
 #include "../../include/bmp/bmp.h"
-#include "../../include/utils/utils.h"
+
 
 #include <errno.h>
 
@@ -22,7 +23,7 @@ static enum write_status write_image(FILE* const out, const struct image* const 
 enum write_status write_image_to(const char* const path, const struct image* const img) {
     if (!path) return WRITE_NULL_FILE_POINTER;
 
-    if (!check_file_format(path)) return WRITE_UNSUPPORTED_TYPE;
+    if (!return_file_format(path)) return WRITE_UNSUPPORTED_TYPE;
 
     FILE* out = fopen(path, "wb+");
     if (!out) return errno_to_write_status(errno);

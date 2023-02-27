@@ -6,13 +6,13 @@
 #include <stdint.h>
 
 /**
- * Return substring from @param position to the end of file
+ * Return substring from @param first_char_of_substring to the end of file
  * @param str
- * @param position
+ * @param first_char_of_substring
  * @return
  */
-char* get_substring(const char* const str, size_t position);
+char* get_substring(const char* const str, char first_char_of_substring);
 
-uint8_t check_file_format(const char* const path);
+int check_file_format(const char* const path);
 
 #endif //IMAGE_TRANSFORMER_UTILS_H
