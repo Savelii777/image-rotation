@@ -1,5 +1,6 @@
 #include "../../include/image/image_read.h"
 #include "../../include/bmp/bmp.h"
+#include "../../include/g24/g24.h"
 #include "../../include/utils/utils.h"
 #include "image/image_utils.h"
 

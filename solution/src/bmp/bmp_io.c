@@ -15,7 +15,7 @@ static uint32_t calc_file_size(const size_t width, const size_t height) {
 
 // read image
 
-enum bmp_read_status read_image_data(FILE* const in, struct image* const image) {
+enum bmp_read_status read_BMP_image_data(FILE* const in, struct image* const image) {
     uint64_t width = image->width;
     uint8_t pad = calc_img_padding(width);
 

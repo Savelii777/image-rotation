@@ -1,6 +1,7 @@
 #include "../../include/image/image_write.h"
+#include "../../include/image/image_utils.h"
 #include "../../include/bmp/bmp.h"
-#include "../../include/utils/utils.h"
+
 
 #include <errno.h>
 

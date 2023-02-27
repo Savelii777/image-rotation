@@ -3,7 +3,12 @@
 
 enum g24_read_status {
     G24_READ_OK = 0,
-    G24_READ_ERROR
+    G24_READ_NULL_IMAGE,
+    G24_READ_INVALID_HEADER,
+    G24_READ_INVALID_BITS,
+    G24_READ_OUT_OF_MEMORY,
+
+    G24_READ_STATUSES_NUMBER
 };
 
 char* g24_read_status_message(enum g24_read_status status);

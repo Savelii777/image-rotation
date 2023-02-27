@@ -14,7 +14,7 @@ enum bmp_read_status from_bmp( FILE* const in, struct image* const image ) {
 
     if (!image->data) return BMP_READ_OUT_OF_MEMORY;
 
-    return read_image_data(in, image);
+    return read_BMP_image_data(in, image);
 }
 
 

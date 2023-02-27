@@ -20,7 +20,7 @@
 
 enum bmp_read_status read_BMP_header(FILE* const in, struct bmp_header* const header);
 
-enum bmp_read_status read_image_data(FILE* const in, struct image* const image );
+enum bmp_read_status read_BMP_image_data(FILE* const in, struct image* const image );
 
 enum bmp_write_status write_header(FILE* const out, const struct image* const image);
 
