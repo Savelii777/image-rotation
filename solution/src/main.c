@@ -4,7 +4,6 @@
 
 #include "../include/image/image_io.h"
 #include "../include/image/image_utils.h"
-#include "../include/utils/utils.h"
 
 int main( int argc, char** argv ) {
 
@@ -26,7 +25,23 @@ int main( int argc, char** argv ) {
         return 1;
     }
 
-    struct image result = rotate(image);
+    // TODO: -----------------------------------------------------------------------------------------------------------
+    //  1. rotate image by 0.5 * Pi
+    //  2. blur the image by 3x3 kernel
+
+    /// 1.
+    //struct image result = rotate(image);
+
+    struct kernel kernel3 = {
+            .height = 3,
+            .width = 3,
+            .kernel = (double[]){ 1./29, 4./29, 1./29,
+                                  4./29, 9./29, 4./29,
+                                  1./29, 4./29, 1./29}
+    };
+
+    /// 2.
+    struct image result = convolution(image, kernel3);
 
     enum write_status write_status = WRITE_MEMORY_NOT_ALLOCATED;
 
