@@ -6,7 +6,7 @@ enum bmp_read_status from_bmp( FILE* const in, struct image* const image ) {
     if (!in || !image) return BMP_READ_NULL_IMAGE;
 
     struct bmp_header header;
-    enum bmp_read_status header_read_status = read_header(in, &header);
+    enum bmp_read_status header_read_status = read_BMP_header(in, &header);
 
     if (header_read_status > 0) return header_read_status;
 
@@ -16,6 +16,7 @@ enum bmp_read_status from_bmp( FILE* const in, struct image* const image ) {
 
     return read_image_data(in, image);
 }
+
 
 
 enum bmp_write_status to_bmp(FILE* const out, const struct image* const image ) {

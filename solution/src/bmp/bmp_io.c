@@ -30,7 +30,7 @@ enum bmp_read_status read_image_data(FILE* const in, struct image* const image) 
     return BMP_READ_OK;
 }
 
-enum bmp_read_status read_header(FILE* const in, struct bmp_header* const header) {
+enum bmp_read_status read_BMP_header(FILE* const in, struct bmp_header* const header) {
     if(fread(header, sizeof(struct bmp_header), 1, in) != 1)
         return BMP_READ_INVALID_HEADER;
 
